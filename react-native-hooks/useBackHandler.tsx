@@ -7,10 +7,11 @@ const useBackHandler = ({
   },
   noCallBack = () => {},
   message = "EXIT!",
+  description = "Are you sure you want to exit?",
 }) => {
   useEffect(() => {
     const backAction = () => {
-      Alert.alert(message, "", [
+      Alert.alert(message, description, [
         {
           text: "Cancel",
           onPress: () => noCallBack(),
